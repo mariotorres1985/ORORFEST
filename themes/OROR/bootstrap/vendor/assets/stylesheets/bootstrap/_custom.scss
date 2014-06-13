@@ -1,0 +1,104 @@
+
+
+hr{
+border-top: 2px solid;
+border-color: #afafaf;
+margin: 1px 0px
+
+}
+
+
+li {
+text-decoration: none;
+}
+
+
+h1 h3 h4{
+	line-height: 1.5;
+	letter-spacing: 1px;
+}
+ 
+
+
+h2{
+color:white;
+}
+
+
+a {
+color:  #999;
+
+}
+
+a:hover {
+color:  #a2c44a;
+
+}
+
+
+.OROR{
+
+font-weight: 400;
+font-size: 17vw;
+color: white;
+line-height: 21vw;
+margin: 0px;
+text-align: justify
+
+}
+
+.ONCE {
+	
+color:#afafaf;
+font-size: 8vw; 
+line-height: 10vw;
+font-weight: 400;
+text-align: justify;
+
+}
+
+.fest{
+font-weight: 400;
+font-size: 19vw;
+color: white;
+line-height: 21vw;
+margin: 0px;
+text-align: justify;
+letter-spacing: 15px;
+}
+
+#footer{
+ 
+  position: relative;
+  margin-top: -50px; /* negative value of footer height */
+  height: 150px;
+  clear:both;
+  padding-top:20px;
+
+}
+
+.mission{
+font-size: 5vw;
+
+
+
+}
+
+
+@media (min-width: 768px){
+
+body {
+  padding-top: 50px;
+}
+
+}
+
+
+
+
+ 
+
+
+
+
+
