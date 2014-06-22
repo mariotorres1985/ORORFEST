@@ -2,7 +2,9 @@
 <html lang="en" class="no-js">
 <head>
 	<meta charset="utf-8" />
-	
+
+	{{ config.custom_setting }}
+
 	<title>{{ site_title }}</title>
 {% if meta.description %}
 	<meta name="description" content="{{ meta.description }}"> 
@@ -116,7 +118,7 @@
 					
 						<div class="row">
 
-						  <h2  id="Keynote" class=" col-xs-6 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">Featured </h2>
+						  <h2  id="Keynote" class=" col-xs-6 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">Keynote </h2>
 					    
 						</div>
 
@@ -126,13 +128,14 @@
 				
 								{% if page.date %} <!-- Note we check for Date field (posts) here -->
 
-								<div class="post">
+								<div class="post row">
 
-							<h3><a href="{{ page.url }}">{{ page.title }}</a></h3>
+							<h3 class="col-md-4"><a href="{{ page.url }}"> {{ page.thumbnail }}</a></h3>
+							<h3 class="col-md-6"><a href="{{ page.url }}"> {{ page.title }}</a></h3>
 
-							<p class="meta">{{ page.date_formatted }}</p>
+							<p class="meta col-md-6">{{ page.date_formatted }}</p>
 
-							<p class="excerpt">{{ page.excerpt }}</p>
+							<p class="excerpt col-md-6">{{ page.excerpt }}</p>
 
 						</div>
 
@@ -143,13 +146,18 @@
 		{% else %} <!-- Single page shows individual blog post -->
 
 			<div class="post ">
+				<div class="ol-xs-8 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
 
-				{% if meta.title %}<h2>{{ meta.title }}</h2>{% endif %}
+					{% if meta.title %}<h2>{{ meta.title }}</h2><p>{{ meta.date_formatted }}</p>
 
-				<p class=" hidden meta">{{ meta.date_formatted }}</p>
+					<hr><hr><br>
 
-				{{ content }}
-				
+					{% endif %}
+
+					<p class=" hidden meta">{{ meta.date_formatted }}</p>
+
+					{{ content }}
+				</div>
 
 			
 			</div>

@@ -10,7 +10,7 @@ if (typeof Object.create !== 'function') {
 }
 
 var Calagator = {
-  nextId: 1,
+  nextId: 0,
   activate_calendars: function() {
                         var that = this;
                         jQuery("a[rel='calendar'][type='application/json']").each(function(i, e) { that.create(e, that); });
@@ -19,16 +19,22 @@ var Calagator = {
   create: function(calendar_link, link) {
             var calendar = Object.create(this);
 
+        
+
+         
+
             calendar.href = jQuery(calendar_link).attr('href');
             calendar.container = jQuery(calendar_link).replaceWith('<div class="calendar" id="calendar'+Calagator.nextId+'"></div>');
             calendar.container = jQuery('div#calendar'+Calagator.nextId);
             Calagator.nextId++
             calendar.events = [];
-
             jQuery.getJSON(calendar.href + '&callback=?',
               function(events) {
                 jQuery.each(events, function(i, item) {
+              
                   calendar.Item.create(item, calendar);
+
+              
                 });
               });
           },
@@ -43,7 +49,9 @@ var Calagator = {
                 item.start_time = item.parse_date(data.start_time);
                 item.end_time   = item.parse_date(data.end_time);
                 item.calendar = calendar;
+           
                 item.calendar.container.append('<p class="vevent">'+ '<h3>' + '<a href="'+item.link()+'"  target="_blank">'+item.summary() + '</h3>'+"</a> &ndash; " + item.start_and_end() + item.venue()  + '</p>');
+               
                 item.calendar.events.push(this);
               }
             },
@@ -52,8 +60,8 @@ var Calagator = {
         },
     summary: function() {
              var title = this.data.title;
-             if (title.indexOf(" - ") > -1) {
-               title = title.substring(0, title.indexOf(" -"))
+             if (title.indexOf(" beer ") > -1) {
+               title = title.substring(1, title.indexOf(" beer"))
              }
                return '<span class="summary">' + title + '</span>';
              },
@@ -95,7 +103,7 @@ var Calagator = {
   }
 };
 
- // var jQuery_1_4_2 = jQuery.noConflict();
+
 
 jQuery(document).ready(function(){
   Calagator.activate_calendars();

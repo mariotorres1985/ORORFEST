@@ -13,15 +13,18 @@ text-decoration: none;
 }
 
 
-h1 h3 h4{
-	line-height: 1.5;
-	letter-spacing: 1px;
+h1 h3 h4 p{
+	line-height: 50px;
+	letter-spacing: 2px;
+	vertical-align: baseline;
 }
  
 
 
 h2{
 color:white;
+line-height: 40px;
+vertical-align: baseline;
 }
 
 
@@ -84,15 +87,31 @@ font-size: 5vw;
 
 }
 
-
-
-@media (min-width: 768px){
-
-body {
-  padding-top: 50px;
+html {
+  font-size: 28px;
+  line-height: 5px;
 }
 
+
+li {
+  line-height: 36px;
+  font-size: 20px;
 }
+
+.visitors
+{
+  box-sizing: content-box;
+  padding-left: 15px;
+  overflow: hidden;
+}
+
+// @media (min-width: 768px){
+
+// body {
+//   padding-top: 50px;
+// }
+
+// }
 
 
 

@@ -7608,27 +7608,30 @@ li {
 }
 
 /* line 16, ../stylesheets/bootstrap/_custom.scss */
-h1 h3 h4 {
-  line-height: 1.5;
-  letter-spacing: 1px;
+h1 h3 h4 p {
+  line-height: 50px;
+  letter-spacing: 2px;
+  vertical-align: baseline;
 }
 
-/* line 23, ../stylesheets/bootstrap/_custom.scss */
+/* line 24, ../stylesheets/bootstrap/_custom.scss */
 h2 {
   color: white;
+  line-height: 40px;
+  vertical-align: baseline;
 }
 
-/* line 28, ../stylesheets/bootstrap/_custom.scss */
+/* line 31, ../stylesheets/bootstrap/_custom.scss */
 a {
   color: #999;
 }
 
-/* line 33, ../stylesheets/bootstrap/_custom.scss */
+/* line 36, ../stylesheets/bootstrap/_custom.scss */
 a:hover {
   color: #a2c44a;
 }
 
-/* line 39, ../stylesheets/bootstrap/_custom.scss */
+/* line 42, ../stylesheets/bootstrap/_custom.scss */
 .OROR {
   font-weight: 400;
   font-size: 17vw;
@@ -7638,7 +7641,7 @@ a:hover {
   text-align: justify;
 }
 
-/* line 50, ../stylesheets/bootstrap/_custom.scss */
+/* line 53, ../stylesheets/bootstrap/_custom.scss */
 .ONCE {
   color: #afafaf;
   font-size: 8vw;
@@ -7647,7 +7650,7 @@ a:hover {
   text-align: justify;
 }
 
-/* line 60, ../stylesheets/bootstrap/_custom.scss */
+/* line 63, ../stylesheets/bootstrap/_custom.scss */
 .fest {
   font-weight: 400;
   font-size: 19vw;
@@ -7658,7 +7661,7 @@ a:hover {
   letter-spacing: 5px;
 }
 
-/* line 70, ../stylesheets/bootstrap/_custom.scss */
+/* line 73, ../stylesheets/bootstrap/_custom.scss */
 #footer {
   position: relative;
   margin-top: -30px;
@@ -7668,14 +7671,26 @@ a:hover {
   padding-top: 20px;
 }
 
-/* line 80, ../stylesheets/bootstrap/_custom.scss */
+/* line 83, ../stylesheets/bootstrap/_custom.scss */
 .mission {
   font-size: 5vw;
 }
 
-@media (min-width: 768px) {
-  /* line 91, ../stylesheets/bootstrap/_custom.scss */
-  body {
-    padding-top: 50px;
-  }
+/* line 90, ../stylesheets/bootstrap/_custom.scss */
+html {
+  font-size: 28px;
+  line-height: 5px;
+}
+
+/* line 96, ../stylesheets/bootstrap/_custom.scss */
+li {
+  line-height: 36px;
+  font-size: 20px;
+}
+
+/* line 102, ../stylesheets/bootstrap/_custom.scss */
+.visitors {
+  box-sizing: content-box;
+  padding-left: 15px;
+  overflow: hidden;
 }

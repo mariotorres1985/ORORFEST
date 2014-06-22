@@ -6,10 +6,13 @@ Date:2014/01/06
 Description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 
 description tag:main text
+
+thumbnail:<img src="http://placehold.it/350x250" class=" img-responsive ">
 */
 
 
 
+<img src="http://placehold.it/550x350" class="img-responsive ">
 
 
 A First Level Header
