@@ -4,7 +4,7 @@
 // Override any of the default settings below:
 
 $config['site_title'] = 'OROR FEST 2014';			// Site title
-$config['base_url'] = 'http://localhost:8888/ORORFEST2014'; 				// Override base URL (e.g. http://example.com)
+$config['base_url'] = 'http://localhost:8888/ORORFEST'; 				// Override base URL (e.g. http://example.com)
 $config['theme'] = 'OROR'; 			// Set the theme (defaults to "default")
 $config['date_format'] = 'jS M Y';		// Set the PHP date format
 $config['twig_config'] = array(			// Twig settings
