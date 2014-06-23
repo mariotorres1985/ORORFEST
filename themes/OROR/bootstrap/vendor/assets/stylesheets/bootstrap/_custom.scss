@@ -13,8 +13,9 @@ text-decoration: none;
 }
 
 
-h1 h3 h4 p{
-	line-height: 50px;
+h1 h2 h3 h4 h5 p{
+	line-height: 4
+  0px;
 	letter-spacing: 2px;
 	vertical-align: baseline;
 }
@@ -23,8 +24,7 @@ h1 h3 h4 p{
 
 h2{
 color:white;
-line-height: 40px;
-vertical-align: baseline;
+
 }
 
 
@@ -98,12 +98,25 @@ li {
   font-size: 20px;
 }
 
-.visitors
-{
-  box-sizing: content-box;
-  padding-left: 15px;
-  overflow: hidden;
-}
+// .visitors
+// {
+//   box-sizing: content-box;
+//   padding-left: 15px;
+//   overflow: hidden;
+//   display: block;
+// }
+
+// .from
+// {
+//   box-sizing: content-box;
+//   padding-right: 15px;
+//   overflow: hidden;
+//   display: inline;
+// }
+
+
+
+
 
 // @media (min-width: 768px){
 

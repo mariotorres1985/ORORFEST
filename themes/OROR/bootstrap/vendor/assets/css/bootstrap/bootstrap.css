@@ -6759,17 +6759,15 @@ li {
 }
 
 /* line 16, ../../stylesheets/bootstrap/_custom.scss */
-h1 h3 h4 p {
-  line-height: 50px;
+h1 h2 h3 h4 h5 p {
+  line-height: 4 0px;
   letter-spacing: 2px;
   vertical-align: baseline;
 }
 
-/* line 24, ../../stylesheets/bootstrap/_custom.scss */
+/* line 25, ../../stylesheets/bootstrap/_custom.scss */
 h2 {
   color: white;
-  line-height: 40px;
-  vertical-align: baseline;
 }
 
 /* line 31, ../../stylesheets/bootstrap/_custom.scss */
@@ -6837,13 +6835,6 @@ html {
 li {
   line-height: 36px;
   font-size: 20px;
-}
-
-/* line 102, ../../stylesheets/bootstrap/_custom.scss */
-.visitors {
-  box-sizing: content-box;
-  padding-left: 15px;
-  overflow: hidden;
 }
 
 /* line 11, ../../stylesheets/bootstrap/_modals.scss */
@@ -7708,17 +7699,15 @@ li {
 }
 
 /* line 16, ../../stylesheets/bootstrap/_custom.scss */
-h1 h3 h4 p {
-  line-height: 50px;
+h1 h2 h3 h4 h5 p {
+  line-height: 4 0px;
   letter-spacing: 2px;
   vertical-align: baseline;
 }
 
-/* line 24, ../../stylesheets/bootstrap/_custom.scss */
+/* line 25, ../../stylesheets/bootstrap/_custom.scss */
 h2 {
   color: white;
-  line-height: 40px;
-  vertical-align: baseline;
 }
 
 /* line 31, ../../stylesheets/bootstrap/_custom.scss */
@@ -7786,11 +7775,4 @@ html {
 li {
   line-height: 36px;
   font-size: 20px;
-}
-
-/* line 102, ../../stylesheets/bootstrap/_custom.scss */
-.visitors {
-  box-sizing: content-box;
-  padding-left: 15px;
-  overflow: hidden;
 }
