@@ -60,8 +60,8 @@ var Calagator = {
         },
     summary: function() {
              var title = this.data.title;
-             if (title.indexOf(" beer ") > -1) {
-               title = title.substring(1, title.indexOf(" beer"))
+             if (title.indexOf(" ruby") > -1) {
+               title = title.substring(1, title.indexOf(" ruby"))
              }
                return '<span class="summary">' + title + '</span>';
              },
