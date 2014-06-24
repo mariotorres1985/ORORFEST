@@ -488,7 +488,7 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
   font-weight: 500;
-  line-height: 1.1;
+  line-height: 1.4;
   color: inherit;
 }
 /* line 17, ../../stylesheets/bootstrap/_type.scss */
@@ -6758,29 +6758,22 @@ li {
   text-decoration: none;
 }
 
-/* line 16, ../../stylesheets/bootstrap/_custom.scss */
-h1 h2 h3 h4 h5 p {
-  line-height: 4 0px;
-  letter-spacing: 2px;
-  vertical-align: baseline;
-}
-
-/* line 25, ../../stylesheets/bootstrap/_custom.scss */
+/* line 17, ../../stylesheets/bootstrap/_custom.scss */
 h2 {
   color: white;
 }
 
-/* line 31, ../../stylesheets/bootstrap/_custom.scss */
+/* line 23, ../../stylesheets/bootstrap/_custom.scss */
 a {
   color: #999;
 }
 
-/* line 36, ../../stylesheets/bootstrap/_custom.scss */
+/* line 28, ../../stylesheets/bootstrap/_custom.scss */
 a:hover {
   color: #a2c44a;
 }
 
-/* line 42, ../../stylesheets/bootstrap/_custom.scss */
+/* line 34, ../../stylesheets/bootstrap/_custom.scss */
 .OROR {
   font-weight: 400;
   font-size: 17vw;
@@ -6790,7 +6783,7 @@ a:hover {
   text-align: justify;
 }
 
-/* line 53, ../../stylesheets/bootstrap/_custom.scss */
+/* line 45, ../../stylesheets/bootstrap/_custom.scss */
 .ONCE {
   color: #afafaf;
   font-size: 8vw;
@@ -6799,7 +6792,7 @@ a:hover {
   text-align: justify;
 }
 
-/* line 63, ../../stylesheets/bootstrap/_custom.scss */
+/* line 55, ../../stylesheets/bootstrap/_custom.scss */
 .fest {
   font-weight: 400;
   font-size: 19vw;
@@ -6810,7 +6803,7 @@ a:hover {
   letter-spacing: 5px;
 }
 
-/* line 73, ../../stylesheets/bootstrap/_custom.scss */
+/* line 65, ../../stylesheets/bootstrap/_custom.scss */
 #footer {
   position: relative;
   margin-top: -30px;
@@ -6820,21 +6813,27 @@ a:hover {
   padding-top: 20px;
 }
 
-/* line 83, ../../stylesheets/bootstrap/_custom.scss */
+/* line 75, ../../stylesheets/bootstrap/_custom.scss */
 .mission {
   font-size: 5vw;
 }
 
-/* line 90, ../../stylesheets/bootstrap/_custom.scss */
+/* line 82, ../../stylesheets/bootstrap/_custom.scss */
 html {
   font-size: 28px;
-  line-height: 5px;
 }
 
-/* line 96, ../../stylesheets/bootstrap/_custom.scss */
+/* line 88, ../../stylesheets/bootstrap/_custom.scss */
 li {
   line-height: 36px;
   font-size: 20px;
+}
+
+/* line 94, ../../stylesheets/bootstrap/_custom.scss */
+h1 h2 h3 h4 h5 p {
+  line-height: 100px;
+  letter-spacing: 3px;
+  vertical-align: baseline;
 }
 
 /* line 11, ../../stylesheets/bootstrap/_modals.scss */
@@ -7698,29 +7697,22 @@ li {
   text-decoration: none;
 }
 
-/* line 16, ../../stylesheets/bootstrap/_custom.scss */
-h1 h2 h3 h4 h5 p {
-  line-height: 4 0px;
-  letter-spacing: 2px;
-  vertical-align: baseline;
-}
-
-/* line 25, ../../stylesheets/bootstrap/_custom.scss */
+/* line 17, ../../stylesheets/bootstrap/_custom.scss */
 h2 {
   color: white;
 }
 
-/* line 31, ../../stylesheets/bootstrap/_custom.scss */
+/* line 23, ../../stylesheets/bootstrap/_custom.scss */
 a {
   color: #999;
 }
 
-/* line 36, ../../stylesheets/bootstrap/_custom.scss */
+/* line 28, ../../stylesheets/bootstrap/_custom.scss */
 a:hover {
   color: #a2c44a;
 }
 
-/* line 42, ../../stylesheets/bootstrap/_custom.scss */
+/* line 34, ../../stylesheets/bootstrap/_custom.scss */
 .OROR {
   font-weight: 400;
   font-size: 17vw;
@@ -7730,7 +7722,7 @@ a:hover {
   text-align: justify;
 }
 
-/* line 53, ../../stylesheets/bootstrap/_custom.scss */
+/* line 45, ../../stylesheets/bootstrap/_custom.scss */
 .ONCE {
   color: #afafaf;
   font-size: 8vw;
@@ -7739,7 +7731,7 @@ a:hover {
   text-align: justify;
 }
 
-/* line 63, ../../stylesheets/bootstrap/_custom.scss */
+/* line 55, ../../stylesheets/bootstrap/_custom.scss */
 .fest {
   font-weight: 400;
   font-size: 19vw;
@@ -7750,7 +7742,7 @@ a:hover {
   letter-spacing: 5px;
 }
 
-/* line 73, ../../stylesheets/bootstrap/_custom.scss */
+/* line 65, ../../stylesheets/bootstrap/_custom.scss */
 #footer {
   position: relative;
   margin-top: -30px;
@@ -7760,19 +7752,25 @@ a:hover {
   padding-top: 20px;
 }
 
-/* line 83, ../../stylesheets/bootstrap/_custom.scss */
+/* line 75, ../../stylesheets/bootstrap/_custom.scss */
 .mission {
   font-size: 5vw;
 }
 
-/* line 90, ../../stylesheets/bootstrap/_custom.scss */
+/* line 82, ../../stylesheets/bootstrap/_custom.scss */
 html {
   font-size: 28px;
-  line-height: 5px;
 }
 
-/* line 96, ../../stylesheets/bootstrap/_custom.scss */
+/* line 88, ../../stylesheets/bootstrap/_custom.scss */
 li {
   line-height: 36px;
   font-size: 20px;
+}
+
+/* line 94, ../../stylesheets/bootstrap/_custom.scss */
+h1 h2 h3 h4 h5 p {
+  line-height: 100px;
+  letter-spacing: 3px;
+  vertical-align: baseline;
 }

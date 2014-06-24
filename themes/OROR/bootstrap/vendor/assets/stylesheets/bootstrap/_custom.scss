@@ -11,14 +11,6 @@ margin: 1px 0px
 li {
 text-decoration: none;
 }
-
-
-h1 h2 h3 h4 h5 p{
-	line-height: 4
-  0px;
-	letter-spacing: 2px;
-	vertical-align: baseline;
-}
  
 
 
@@ -89,13 +81,20 @@ font-size: 5vw;
 
 html {
   font-size: 28px;
-  line-height: 5px;
+
 }
 
 
 li {
   line-height: 36px;
   font-size: 20px;
+}
+
+
+h1 h2 h3 h4 h5 p{
+  line-height: 100px;
+  letter-spacing: 3px;
+  vertical-align: baseline;
 }
 
 // .visitors
