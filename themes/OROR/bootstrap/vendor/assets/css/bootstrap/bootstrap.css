@@ -6836,6 +6836,11 @@ h1 h2 h3 h4 h5 p {
   vertical-align: baseline;
 }
 
+/* line 101, ../../stylesheets/bootstrap/_custom.scss */
+.calagator .vevent .description {
+  display: none;
+}
+
 /* line 11, ../../stylesheets/bootstrap/_modals.scss */
 .modal-open {
   overflow: hidden;
@@ -7773,4 +7778,9 @@ h1 h2 h3 h4 h5 p {
   line-height: 100px;
   letter-spacing: 3px;
   vertical-align: baseline;
+}
+
+/* line 101, ../../stylesheets/bootstrap/_custom.scss */
+.calagator .vevent .description {
+  display: none;
 }

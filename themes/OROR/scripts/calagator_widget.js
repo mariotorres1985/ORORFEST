@@ -1,4 +1,4 @@
-/*jslint browser:true */
+// *jslint browser:true */
 /*globals jQuery */
 
 if (typeof Object.create !== 'function') {
@@ -8,7 +8,7 @@ if (typeof Object.create !== 'function') {
     return new F();
   };
 }
-
+//   global var are in the section for action of the calendar 
 var Calagator = {
   nextId: 0,
   activate_calendars: function() {
@@ -19,7 +19,7 @@ var Calagator = {
   create: function(calendar_link, link) {
             var calendar = Object.create(this);
 
-        
+             
 
          
 
@@ -27,8 +27,8 @@ var Calagator = {
             calendar.container = jQuery(calendar_link).replaceWith('<div class="calendar" id="calendar'+Calagator.nextId+'"></div>');
             calendar.container = jQuery('div#calendar'+Calagator.nextId);
             Calagator.nextId++
-            calendar.events = [];
-            jQuery.getJSON(calendar.href + '&callback=?',
+            calendar.events = ['href'];
+            jQuery.getJSON( calendar.href + '&JsonType=callback&callback=?'  ,
               function(events) {
                 jQuery.each(events, function(i, item) {
               
@@ -39,6 +39,7 @@ var Calagator = {
               });
           },
 
+// This is where the items get values
   Item: {
     create: function(data, calendar) {
               var item = Object.create(this),
@@ -49,18 +50,27 @@ var Calagator = {
                 item.start_time = item.parse_date(data.start_time);
                 item.end_time   = item.parse_date(data.end_time);
                 item.calendar = calendar;
-           
-                item.calendar.container.append('<p class="vevent">'+ '<h3>' + '<a href="'+item.link()+'"  target="_blank">'+item.summary() + '</h3>'+"</a> &ndash; " + item.start_and_end() + item.venue()  + '</p>');
+            
+                // how the items will be displayed  with attributes are asigned 
+                item.calendar.container.append('<div class="vevent">'+ '<h3>' + '<a href="'+item.link()+ '"  target="_self">'+item.summary() + '</h3>'+"</a>  " +  '<p>'+ item.start_and_end() + item.venue()  + item.description()+ '</p>' + '</div>');
                
                 item.calendar.events.push(this);
+                
               }
             },
+
     link: function() {
+         
+          // curently directs to the calagator page for each feed +this.data.id fill the id info for the url.
           return 'http://calagator.org/events/'+this.data.id;
+
+            // this url pulls the feed to the calagator events page -  it pulls the complet list. Still need to find away to pull a single 
+            // event to this page, I have used $.get() but may have implmented wrong. 
+          // http://localhost:8888/ORORFEST/events?url=http://calagator.org/events/search.json?id='+this.data.id;
         },
     summary: function() {
              var title = this.data.title;
-             if (title.indexOf(" ruby") > -1) {
+             if (title.indexOf(" ruby ") > -1) {
                title = title.substring(1, title.indexOf(" ruby"))
              }
                return '<span class="summary">' + title + '</span>';
@@ -75,16 +85,13 @@ var Calagator = {
     venue: function() {
              return '<a rel="venue" type="application/json" href="' + this.data.venue_id + '" />';
            },
+           // hidden on the mainpage, but shown on events.
     description: function() {
-                   // var limit = 10;
-                   // var chars = $(".description").text(); 
-                   //       if (chars.length > limit) {
-                   //           var visiblePart = $("<span> "+ chars.substr(0, limit-1) +"</span>");
-                   //           var dots = $("<span class='dots'>... </span>");
-                   //           var hiddenPart = $("<span class='description'>"+ chars.substr(limit-1) +"</span>") 
-                   //         }
+                   
             return '<p class="description">' + this.data.description.replace(/\n/g, '<br />') + '</p>';
                 },
+
+
     iso8601: function(time) {
                var tz_offset = time.toString().match(/([+\-]\d+)/);
                if (tz_offset.length > 1) {
@@ -101,10 +108,19 @@ var Calagator = {
                     return (new Date(prepared));
                 }
   }
-};
+
+
+}; 
+
+
+
 
 
 
 jQuery(document).ready(function(){
   Calagator.activate_calendars();
-});
+
+
+    });
+
+

@@ -7684,3 +7684,8 @@ h1 h2 h3 h4 h5 p {
   letter-spacing: 3px;
   vertical-align: baseline;
 }
+
+/* line 101, ../stylesheets/bootstrap/_custom.scss */
+.calagator .vevent .description {
+  display: none;
+}
