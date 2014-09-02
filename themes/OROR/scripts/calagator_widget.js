@@ -70,8 +70,8 @@ var Calagator = {
         },
     summary: function() {
              var title = this.data.title;
-             if (title.indexOf(" ruby ") > -1) {
-               title = title.substring(1, title.indexOf(" ruby"))
+             if (title.indexOf(" ororfest ") > -1) {
+               title = title.substring(1, title.indexOf(" ororfest"))
              }
                return '<span class="summary">' + title + '</span>';
              },

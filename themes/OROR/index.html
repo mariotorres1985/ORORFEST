@@ -11,38 +11,25 @@
 {% endif %}{% if meta.robots %}
 	<meta name="robots" content="{{ meta.robots }}">
 {% endif %}
-	
-
-
-	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
-	  <script src="{{theme_url}}/scripts/bootstrap.js" type="application/javascript"></script>
-
-	   
-	   <script src="{{theme_url}}/scripts/modernizr-2.6.1.min.js"></script>
-
-
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" type="text/css" />
-	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="{{theme_url}}/scripts/bootstrap.js" type="application/javascript"></script>
+  <script src="{{theme_url}}/scripts/modernizr-2.6.1.min.js"></script>
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" type="text/css" />	
 	<link rel="stylesheet" href="{{ theme_url }}/bootstrap/vendor/assets/css/bootstrap.css" type="text/css" />
-
 	<script src="{{theme_url}}/scripts/strftime.js" type="text/javascript"></script>
-
-
-
-	
-		
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
 	<script src="{{theme_url}}/scripts/calagator_widget.js" type="text/javascript"></script>
-
-	  
-
-	  
-
-
-
-	  	  
-
+	<style>
+	
+	#pitchfest {
+	  background: transparent url({{theme_url}}/images/pitchfest.jpg);
+	  background-size: cover;
+	  height: 50vw;
+	}
+	#content img {
+	  max-width: 100%;
+	}
+	</style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar">
@@ -73,40 +60,10 @@
 
 	          <ul class="nav navbar-nav">
 
-
-
-
-	          
-	            {% if is_front_page %} <!-- Front page lists navbar -->
-
-						<li><a href="#Keynote">Keynote</a></li>
-	          			<li><a href="#event">Events</a></li>
-	          			<li><a href="#register">Register</a></li>
-
-			          {% for page in pages %}
-			          	 {% if not page.date %} <!-- statment saying not us pull pages with dates -->
-			            <li><a href="{{ page.url }}">{{ page.title }}</a></li> 
-						 {% endif %}
-			             {% endfor %}
-
-
-			        {% else %} <!-- this is the nav for every other page -->
-
-			        
-			        <li><a href="{{ base_url }}#event">Events</a></li>
-			        <li><a href="{{ base_url }}#Keynote">Keynote</a></li>
-			        <li><a href="{{ base_url }}#register">Register</a></li>
-
-
-			                  {% for page in pages %}
-			                  	 {% if not page.date %}<!-- statment saying not us pull pages with dates -->
-			                    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-			        			 {% endif %}
-			                     {% endfor %}
-			             
-			            
-			    {% endif %}      
-
+			        <li><a href="{{ base_url }}#Keynote">Featured Projects</a></li>
+	          			<li><a href="{{ base_url }}#pitchfest-header">9/9/2014 Pitchfest</a></li>
+  			        <li><a href="{{ base_url }}#event">Events</a></li>
+  			        <li><a href="{{base_url}}/about">About</a></li>
 	            </ul>
 
 	            </li>
@@ -139,50 +96,56 @@
 					
 						<div class="row">
 
-						  <h2  id="Keynote" class=" col-xs-6 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">Keynote </h2>
+						  <h2  id="Keynote" class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2  col-lg-8 col-lg-offset-2 ">Featured Projects</h2>
 					    
 						</div>
+  
+							<div id="posts" class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2  col-lg-8 col-lg-offset-2">
+									
+														{% for page in pages %}
+											
+															{% if page.date %} <!-- Note we check for Date field (posts) here -->
+							
+															<div class="post row">
+							
+													<h3 class="col-xs-10 col-xs-offset-1 col-sm-8 col-md-4 col-lg-3 thumbnail"><a href="{{ page.url }}"><img src="{{theme_url}}/images/{{ page.thumbnail }}"/></a></h3>
+														<h3 class="col-xs-8 col-xs-offset-1 col-sm-10 col-md-4 col-lg-4 "><a href="{{ page.url }}"> {{ page.title }}</a></h3>
+  													<h4 class="col-xs-8 col-xs-offset-1 col-sm-10 col-md-4 col-lg-4 "><a href="{{ page.url2 }}"> {{ page.url2 }}</a></h4>							
+														<p class="excerpt col-xs-9 col-xs-offset-1 col-sm-10 col-md-6 col-lg-6">{{ page.description}}</p>
+							
+													</div>
+							
+											{% endif %}
+										{% endfor %}
+										{% else %} <!-- Single page shows individual blog post -->
+										
+													<div class="post ">
+														<div class="col-xs-8 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+										
+															{% if meta.title %}<h2><a href="{{meta.url2}}" target="_blank">{{ meta.title }}</a></h2>
+															<hr><hr><br>
+										
+															{% endif %}
+										
+															<!--<p class=" hidden meta">{{ meta.date_formatted }}</p>-->
+        										<div class="col-10 offset-2 headline"><a href="{{meta.url2}}" target="_blank"><img src="{{theme_url}}/images/{{ meta.thumbnail }}" /></a></div>
+        										<div id="content" class="col-10 offset-2">
+        										<hr style="margin: 20px 0px;">
+        										  <p>{{ meta.description }}</p>
+        											{{ content }}
+        											</div>
+        											
+														</div>
+										
+													
+													</div>
+										
+												{% endif %}
+												</div>
 
-							<div id="posts" class="post col-xs-8 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-1 col-lg-8 col-lg-offset-1 ">
-
-							{% for page in pages %}
-				
-								{% if page.date %} <!-- Note we check for Date field (posts) here -->
-
-								<div class="post row">
-
-						<h3 class="col-xs-10 col-xs-offset-1 col-sm-8 col-md-4 col-lg-3"><a href="{{ page.url }}"> {{ page.thumbnail }}</a></h3>
-							<h3 class="col-xs-8 col-xs-offset-1 col-sm-10 col-md-4 col-lg-4 "><a href="{{ page.url }}"> {{ page.title }}</a></h3>
-
-							<p class="meta col-xs-6 col-xs-offset-1 col-sm-6 col-md-4  col-lg-4">{{ page.date_formatted }}</p>
-
-							<p class="excerpt col-xs-8 col-xs-offset-1 col-sm-10 col-md-6 col-lg-6">{{ page.excerpt }}</p>
-
-						</div>
-
-				{% endif %}
-			{% endfor %}
-			</div>
-
-		{% else %} <!-- Single page shows individual blog post -->
-
-			<div class="post ">
-				<div class="col-xs-8 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
-
-					{% if meta.title %}<h2>{{ meta.title }}</h2>
-					<hr><hr><br>
-
-					{% endif %}
-
-					<p class=" hidden meta">{{ meta.date_formatted }}</p>
-
-					{{ content }}
-				</div>
-
-			
-			</div>
-
-		{% endif %}
+		
+		
+		
 
 
 
@@ -201,7 +164,7 @@
 
 							{%include "static/eventBooking.twig" %}
 
-							{%include "static/getTickets.twig"%}
+
 				</div>	
 
 			</div>

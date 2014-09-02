@@ -3,7 +3,7 @@
 hr{
 border-top: 2px solid;
 border-color: #afafaf;
-margin: 1px 0px
+margin: 1px 0px;
 
 }
 
@@ -19,9 +19,16 @@ color:white;
 
 }
 
+#who h2 {
+font-size: 3.2vw;
+}
+
+#who h3 {
+font-size: 2.7vw;
+}
 
 a {
-color:  #999;
+color:  #ff8079;
 
 }
 
@@ -38,7 +45,7 @@ font-size: 17vw;
 color: white;
 line-height: 21vw;
 margin: 0px;
-text-align: justify
+text-align: justify;
 
 }
 
@@ -74,10 +81,11 @@ letter-spacing: 5px;
 
 .mission{
 font-size: 5vw;
-
-
-
+  h1 {
+  font-size: 33px;
+  }
 }
+
 
 html {
   font-size: 28px;
@@ -106,7 +114,13 @@ h1 h2 h3 h4 h5 p{
   }
 
 
+p {
+font-size: 2em;
+}
 
+.mission {
+text-align: center;
+}
 
 
 

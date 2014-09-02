@@ -23,6 +23,7 @@ $config['custom_setting'] = ''; 	// Can be accessed by {{ config.custom_setting 
    $config['custom_meta_values'] = array(
  //page slug keep lower case
     'slug' => 'Slug',
+    'url2' => "URL2",
     //page category
     'category' => 'Category',
     //page status
